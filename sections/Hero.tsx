@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Button from "../components/Button";
+import { GoProjectSymlink } from "react-icons/go";
 
 const lines = [
   "const developer = {",
@@ -12,11 +14,11 @@ const lines = [
 
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center justify-between px-10">
+    <section className="h-screen flex items-center justify-between px-10 bg-gray-1000">
       
     <section className="min-h-screen flex items-start pt-20">
       <div className="pl-6 md:pl-10">
-        <h1 className="text-red-50 md:text-7xl lg:text-8xl font-extrabold leading-tight">
+        <h1 className="text-indigo-50 md:text-7xl lg:text-8xl font-extrabold leading-tight">
           Matheus <br /> Di Santo
         </h1>
 
@@ -26,10 +28,24 @@ export default function Hero() {
             Desenvolvedor Frontend
           </p>
         </div>
-        <p className="text-gray-400 text-lg font-light mt-4 pt-6   ">
-            Especializado em criar interfaces modernas, performáticas e <br />centradas na experiência do usuário.
+        
+        <p className="mt-4 text-gray-400 text-xl md:text-2xl leading-relaxed font-medium max-w-xl mt-4 pt-6">
+          Especializado em criar interfaces modernas, performáticas e
+          centradas na experiência do usuário.
         </p>
 
+        <div className="flex gap-4 mt-8">
+          <Button  
+            icon={<GoProjectSymlink size={18}
+            className="transition-transform duration-300 group-hover:rotate-12" 
+          />}>
+            Ver Projetos
+          </Button>
+
+          <Button variant="outline">
+            Entre em Contato
+          </Button>
+        </div>
       </div>
     </section>
 
